@@ -19,10 +19,12 @@ withDefaults(
     :is="to ? NuxtLink : href ? 'a' : 'span'"
     :to="to"
     :href="href"
-    class="group inline-flex items-center gap-3 text-foreground no-underline"
-    :class="row ? 'gutter w-full border-b border-hairline py-7 text-xl' : 'text-base'"
+    class="group text-foreground inline-flex items-center gap-3 no-underline"
+    :class="row ? 'gutter border-hairline w-full border-b py-7 text-xl' : 'text-base'"
   >
     <span class="underline-offset-[6px] group-hover:underline">{{ label }}</span>
-    <ArrowLeft class="size-5 transition-transform duration-300 group-hover:-translate-x-1.5" />
+    <ArrowLeft
+      class="size-5 transition-transform duration-300 group-hover:-translate-x-1.5"
+    />
   </component>
 </template>

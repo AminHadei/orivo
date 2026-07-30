@@ -14,7 +14,7 @@ const meta = computed(
 <template>
   <NuxtLink
     :to="`/blog/${post.slug}`"
-    class="group flex h-full flex-col p-8 text-foreground no-underline transition-colors hover:bg-muted lg:p-12.5"
+    class="group text-foreground hover:bg-muted flex h-full flex-col p-8 no-underline transition-colors lg:p-12.5"
   >
     <span class="type-eyebrow block">{{ post.category }}</span>
 
@@ -23,7 +23,9 @@ const meta = computed(
 
     <div class="mt-auto flex items-center justify-between gap-4 pt-8">
       <span class="type-meta">{{ meta }}</span>
-      <ArrowLeft class="size-5 shrink-0 transition-transform duration-300 group-hover:-translate-x-1.5" />
+      <ArrowLeft
+        class="size-5 shrink-0 transition-transform duration-300 group-hover:-translate-x-1.5"
+      />
     </div>
   </NuxtLink>
 </template>

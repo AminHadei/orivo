@@ -10,6 +10,15 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "prepare": "husky",
+    "typecheck": "nuxt typecheck",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write",
+    "spellcheck": "cspell --no-progress --no-summary \"**/*.{ts,js,vue,mjs,cjs,md,css,json}\"",
+    "check": "pnpm typecheck && pnpm lint && pnpm format && pnpm spellcheck",
+    "check:fix": "pnpm lint:fix && pnpm format:fix && pnpm check",
     "icons:generate": "cd public && npx @resvg/resvg-js-cli --fit-width 180 favicon.svg apple-touch-icon.png && npx @resvg/resvg-js-cli --fit-width 512 favicon.svg icon-512.png && npx @resvg/resvg-js-cli --fit-width 512 icon-maskable.svg icon-maskable-512.png && npx @resvg/resvg-js-cli --fit-width 48 favicon.svg /tmp/orivo-fav48.png && npx @resvg/resvg-js-cli --fit-width 32 favicon.svg /tmp/orivo-fav32.png && npx @resvg/resvg-js-cli --fit-width 16 favicon.svg /tmp/orivo-fav16.png && magick /tmp/orivo-fav48.png /tmp/orivo-fav32.png /tmp/orivo-fav16.png favicon.ico && rm /tmp/orivo-fav48.png /tmp/orivo-fav32.png /tmp/orivo-fav16.png"
   },
   "dependencies": {
@@ -27,8 +36,36 @@
     "vue-router": "^5.1.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^10.0.1",
+    "@nuxt/eslint": "^1.16.0",
     "@tailwindcss/vite": "^4.3.0",
+    "cspell": "^9.8.0",
+    "eslint": "^10.8.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-vue": "^10.2.0",
+    "globals": "^16.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
     "tailwindcss": "^4.3.0",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.34.1",
+    "vue-tsc": "^2.2.10"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue,json,md,css,yml,yaml}": [
+      "prettier --write"
+    ],
+    "*.{js,ts,vue}": [
+      "eslint --fix"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }

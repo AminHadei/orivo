@@ -21,7 +21,7 @@ withDefaults(
     class="hairline-grid"
     :class="[
       `hairline-grid--${cols}`,
-      topRule ? 'border-t border-hairline' : '',
+      topRule ? 'border-hairline border-t' : '',
       bottomRule ? '' : 'hairline-grid--flush-bottom',
     ]"
   >
@@ -64,17 +64,23 @@ withDefaults(
 
   /* Two-column last row - only while the grid is actually 2 columns.
      --2 stays at 2 cols from md up; --3/--4 only between md and lg. */
-  .hairline-grid--flush-bottom.hairline-grid--2 :deep(> *:nth-child(2n + 1):nth-last-child(-n + 2)),
-  .hairline-grid--flush-bottom.hairline-grid--2 :deep(> *:nth-child(2n + 1):nth-last-child(-n + 2) ~ *) {
+  .hairline-grid--flush-bottom.hairline-grid--2
+    :deep(> *:nth-child(2n + 1):nth-last-child(-n + 2)),
+  .hairline-grid--flush-bottom.hairline-grid--2
+    :deep(> *:nth-child(2n + 1):nth-last-child(-n + 2) ~ *) {
     border-block-end: 0;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .hairline-grid--flush-bottom.hairline-grid--3 :deep(> *:nth-child(2n + 1):nth-last-child(-n + 2)),
-  .hairline-grid--flush-bottom.hairline-grid--3 :deep(> *:nth-child(2n + 1):nth-last-child(-n + 2) ~ *),
-  .hairline-grid--flush-bottom.hairline-grid--4 :deep(> *:nth-child(2n + 1):nth-last-child(-n + 2)),
-  .hairline-grid--flush-bottom.hairline-grid--4 :deep(> *:nth-child(2n + 1):nth-last-child(-n + 2) ~ *) {
+  .hairline-grid--flush-bottom.hairline-grid--3
+    :deep(> *:nth-child(2n + 1):nth-last-child(-n + 2)),
+  .hairline-grid--flush-bottom.hairline-grid--3
+    :deep(> *:nth-child(2n + 1):nth-last-child(-n + 2) ~ *),
+  .hairline-grid--flush-bottom.hairline-grid--4
+    :deep(> *:nth-child(2n + 1):nth-last-child(-n + 2)),
+  .hairline-grid--flush-bottom.hairline-grid--4
+    :deep(> *:nth-child(2n + 1):nth-last-child(-n + 2) ~ *) {
     border-block-end: 0;
   }
 }
@@ -92,8 +98,10 @@ withDefaults(
     border-inline-end: 0;
   }
 
-  .hairline-grid--flush-bottom.hairline-grid--3 :deep(> *:nth-child(3n + 1):nth-last-child(-n + 3)),
-  .hairline-grid--flush-bottom.hairline-grid--3 :deep(> *:nth-child(3n + 1):nth-last-child(-n + 3) ~ *) {
+  .hairline-grid--flush-bottom.hairline-grid--3
+    :deep(> *:nth-child(3n + 1):nth-last-child(-n + 3)),
+  .hairline-grid--flush-bottom.hairline-grid--3
+    :deep(> *:nth-child(3n + 1):nth-last-child(-n + 3) ~ *) {
     border-block-end: 0;
   }
 
@@ -109,8 +117,10 @@ withDefaults(
     border-inline-end: 0;
   }
 
-  .hairline-grid--flush-bottom.hairline-grid--4 :deep(> *:nth-child(4n + 1):nth-last-child(-n + 4)),
-  .hairline-grid--flush-bottom.hairline-grid--4 :deep(> *:nth-child(4n + 1):nth-last-child(-n + 4) ~ *) {
+  .hairline-grid--flush-bottom.hairline-grid--4
+    :deep(> *:nth-child(4n + 1):nth-last-child(-n + 4)),
+  .hairline-grid--flush-bottom.hairline-grid--4
+    :deep(> *:nth-child(4n + 1):nth-last-child(-n + 4) ~ *) {
     border-block-end: 0;
   }
 }

@@ -21,12 +21,12 @@ withDefaults(
   <component
     :is="to ? NuxtLink : 'div'"
     :to="to"
-    class="group flex h-full flex-col p-8 text-foreground no-underline lg:p-12.5"
+    class="group text-foreground flex h-full flex-col p-8 no-underline lg:p-12.5"
     :class="
       to
         ? translucentHover
-          ? 'transition-colors hover:bg-muted/40'
-          : 'transition-colors hover:bg-muted'
+          ? 'hover:bg-muted/40 transition-colors'
+          : 'hover:bg-muted transition-colors'
         : ''
     "
   >

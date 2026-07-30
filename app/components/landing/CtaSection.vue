@@ -19,8 +19,8 @@ function onSubmit() {
         <div class="max-w-110">
           <h3 class="type-card-title">آماده شروع هستید؟</h3>
           <p class="type-body mt-2">
-            چالش سازمانی، فرایند پرهزینه یا پرسش‌تان درباره داده و هوش مصنوعی را بفرستید. در نخستین
-            گفت‌وگو تصویری از مسیر پیش رو به‌دست می‌آورید.
+            چالش سازمانی، فرایند پرهزینه یا پرسش‌تان درباره داده و هوش مصنوعی را
+            بفرستید. در نخستین گفت‌وگو تصویری از مسیر پیش رو به‌دست می‌آورید.
           </p>
           <div class="mt-6">
             <ArrowLink href="mailto:aminhadei@gmail.com" label="گفت‌وگو را شروع کنید" />
@@ -35,18 +35,21 @@ function onSubmit() {
             یادداشت‌های تازه درباره هوشمندسازی سازمان را با فاصله منظم دریافت کنید.
           </p>
 
-          <form class="mt-6 flex items-center gap-3 border-b border-hairline pb-3" @submit.prevent="onSubmit">
+          <form
+            class="border-hairline mt-6 flex items-center gap-3 border-b pb-3"
+            @submit.prevent="onSubmit"
+          >
             <input
               v-model="email"
               type="email"
               required
               placeholder="نشانی ایمیل شما"
               aria-label="نشانی ایمیل"
-              class="type-body min-w-0 flex-1 bg-transparent placeholder:text-muted-foreground focus:outline-hidden"
+              class="type-body placeholder:text-muted-foreground min-w-0 flex-1 bg-transparent focus:outline-hidden"
             />
             <button
               type="submit"
-              class="flex size-9 shrink-0 items-center justify-center rounded-full border border-hairline transition-colors hover:bg-foreground hover:text-background"
+              class="border-hairline hover:bg-foreground hover:text-background flex size-9 shrink-0 items-center justify-center rounded-full border transition-colors"
               aria-label="ثبت در خبرنامه"
             >
               <ArrowLeft class="size-4" />
@@ -54,8 +57,13 @@ function onSubmit() {
           </form>
 
           <p class="type-meta mt-4">
-            <span v-if="submitted">نشانی شما ثبت شد. به‌زودی خبرنامه را دریافت می‌کنید.</span>
-            <span v-else>با ثبت ایمیل، دریافت خبرنامه اوریوو را می‌پذیرید. هر زمان می‌توانید لغو کنید.</span>
+            <span v-if="submitted"
+              >نشانی شما ثبت شد. به‌زودی خبرنامه را دریافت می‌کنید.</span
+            >
+            <span v-else
+              >با ثبت ایمیل، دریافت خبرنامه اوریوو را می‌پذیرید. هر زمان می‌توانید لغو
+              کنید.</span
+            >
           </p>
         </div>
       </div>

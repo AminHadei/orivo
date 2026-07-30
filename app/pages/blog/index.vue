@@ -14,15 +14,15 @@ useSeoMeta({
 <template>
   <div>
     <PageHero variant="dusk">
-      <p class="type-eyebrow tracking-[0.04em] text-foreground">مقالات اوریوو</p>
+      <p class="type-eyebrow text-foreground tracking-[0.04em]">مقالات اوریوو</p>
 
       <h1 class="type-display mt-5 max-w-215">
         یادداشت‌هایی درباره داده، فرایند و تصمیم در سازمان
       </h1>
 
       <p class="type-body mt-8 max-w-160">
-        هر نوشته از یک مسئله واقعی در سازمان‌ها شروع می‌شود: جایی که داده هست اما تصمیم نیست، یا
-        ابزار خریداری شده اما فرایند تغییر نکرده است.
+        هر نوشته از یک مسئله واقعی در سازمان‌ها شروع می‌شود: جایی که داده هست اما تصمیم
+        نیست، یا ابزار خریداری شده اما فرایند تغییر نکرده است.
       </p>
     </PageHero>
 

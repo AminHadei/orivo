@@ -4,7 +4,6 @@ import AppLogo from "@/components/AppLogo.vue";
 withDefaults(
   defineProps<{
     size?: "sm" | "md" | "lg";
-    class?: string;
   }>(),
   { size: "md" },
 );
@@ -23,7 +22,6 @@ function onClick(event: MouseEvent) {
   <NuxtLink
     to="/"
     class="text-foreground no-underline"
-    :class="class"
     aria-label="اوریوو"
     @click="onClick"
   >

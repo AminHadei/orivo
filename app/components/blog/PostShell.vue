@@ -24,8 +24,7 @@ const readingLabel = formatReadingTime(post.readingMinutes);
 <template>
   <article>
     <PageHero :variant="post.shape">
-
-      <p class="type-eyebrow tracking-[0.04em] text-foreground">{{ post.category }}</p>
+      <p class="type-eyebrow text-foreground tracking-[0.04em]">{{ post.category }}</p>
 
       <h1 class="type-display mt-5 max-w-215">{{ post.title }}</h1>
 
@@ -40,13 +39,13 @@ const readingLabel = formatReadingTime(post.readingMinutes);
       </div>
     </PageHero>
 
-    <div class="border-t border-hairline">
+    <div class="border-hairline border-t">
       <div class="prose-fa gutter max-w-3xl py-12 lg:py-20">
         <slot />
       </div>
     </div>
 
-    <div class="border-t border-hairline">
+    <div class="border-hairline border-t">
       <ArrowLink class="border-b-0" to="/blog" label="بازگشت به همه مقالات" row />
     </div>
   </article>

@@ -112,7 +112,11 @@ const glow = computed(() => ({
 </script>
 
 <template>
-  <div aria-hidden="true" class="pointer-events-none absolute -z-10 select-none" :style="box">
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute -z-10 select-none"
+    :style="box"
+  >
     <span class="absolute rounded-full" :style="glow" />
     <span class="absolute rounded-full" :style="companion" />
     <span class="absolute inset-0 rounded-full" :style="disc" />

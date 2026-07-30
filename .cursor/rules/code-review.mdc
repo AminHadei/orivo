@@ -1,0 +1,6 @@
+---
+description: Review orivo PRs and diffs using REVIEW.md severity rules.
+alwaysApply: false
+---
+
+Follow @.agents/skills/code-review/SKILL.md.

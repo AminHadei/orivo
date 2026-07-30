@@ -1,0 +1,10 @@
+---
+description: Editing app/pages, app/components, app/composables, app/layouts, or nuxt.config.ts. Nuxt 4 + Vue 3 conventions, baseURL-safe paths.
+globs:
+  - app/**/*.vue
+  - app/**/*.ts
+  - nuxt.config.ts
+alwaysApply: false
+---
+
+Follow @.agents/skills/nuxt-app/SKILL.md.

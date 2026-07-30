@@ -6,15 +6,15 @@ Claude Code: `CLAUDE.md` → `@AGENTS.md`. Cursor / Codex / others: read this fi
 
 ## Project snapshot
 
-| Item          | Value                                                             |
-| ------------- | ----------------------------------------------------------------- |
-| Stack         | Nuxt 4, Vue 3, Vite, TypeScript, Tailwind CSS v4                  |
-| Deploy        | GitHub Pages — **static only** (`pnpm run build:pages`)           |
-| `baseURL`     | `/orivo/`                                                         |
-| Language      | Persian, `dir="rtl"`, `lang="fa"` (Vazirmatn + Inter for Latin)   |
-| App dir       | `app/` (pages, components, composables, layouts, data)            |
-| Static assets | `public/` (favicons, images)                                      |
-| Dev           | `pnpm run dev` — uses `TMPDIR=/tmp` (macOS Nuxt socket fix)       |
+| Item          | Value                                                           |
+| ------------- | --------------------------------------------------------------- |
+| Stack         | Nuxt 4, Vue 3, Vite, TypeScript, Tailwind CSS v4                |
+| Deploy        | GitHub Pages — **static only** (`pnpm run build:pages`)         |
+| `baseURL`     | `/orivo/`                                                       |
+| Language      | Persian, `dir="rtl"`, `lang="fa"` (Vazirmatn + Inter for Latin) |
+| App dir       | `app/` (pages, components, composables, layouts, data)          |
+| Static assets | `public/` (favicons, images)                                    |
+| Dev           | `pnpm run dev` — uses `TMPDIR=/tmp` (macOS Nuxt socket fix)     |
 
 **Hard constraint:** GitHub Pages has no Node runtime. Keep content in `app/data/*.json` or `public/`. Prerender pages at build time; do not rely on `server/api/*` in production.
 
@@ -39,16 +39,19 @@ The visual language is a direct port of [designsystems.com](https://www.designsy
 
 ## Skills (load on demand)
 
-Canonical: [`.agents/skills/`](./.agents/skills/). Cursor: [`.cursor/rules/`](./.cursor/rules/).
+Canonical: [`.agents/skills/`](./.agents/skills/). Cursor: [`.cursor/rules/`](./.cursor/rules/). Claude: [`.claude/skills/`](./.claude/skills/).
 
-| Skill              | When                                        |
-| ------------------ | ------------------------------------------- |
-| `nuxt-app`         | Editing `app/**`, `nuxt.config.ts`, Vue/TS  |
-| `design-system`    | Layout, typography, RTL, components         |
-| `static-deploy`    | Deploy, `baseURL`, CI, static data          |
-| `content-fa`       | Writing Persian copy and blog posts         |
-| `git-conventions`  | Commits, branch naming                      |
-| `pre-commit`       | Verification before declaring work done     |
+| Skill              | When                                       |
+| ------------------ | ------------------------------------------ |
+| `nuxt-app`         | Editing `app/**`, `nuxt.config.ts`, Vue/TS |
+| `design-system`    | Layout, typography, RTL, components        |
+| `static-deploy`    | Deploy, `baseURL`, CI, static data         |
+| `content-fa`       | Writing Persian copy and blog posts        |
+| `code-conventions` | Cross-cutting Vue/TS conventions           |
+| `git-conventions`  | Commits, branch naming, hooks              |
+| `pre-commit`       | Verification before declaring work done    |
+| `code-review`      | PR / diff review via `REVIEW.md`           |
+| `doc-authoring`    | Handbook docs and ADRs                     |
 
 ## Agent rules
 

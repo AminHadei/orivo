@@ -1,0 +1,10 @@
+---
+description: Persian copy, blog posts, and microcopy for orivo.
+globs:
+  - app/pages/blog/**/*
+  - app/data/**/*
+  - app/components/landing/**/*
+alwaysApply: false
+---
+
+Follow @.agents/skills/content-fa/SKILL.md.

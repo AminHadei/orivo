@@ -1,0 +1,14 @@
+---
+description: Base rules — defer to AGENTS.md
+alwaysApply: true
+---
+
+This project's agent documentation is the root `AGENTS.md` file. Read it before making any change. It is the single source of truth for:
+
+- Project overview (Persian consulting site + blog, Nuxt 4 + Vite)
+- GitHub Pages static deployment (`baseURL: /orivo/`)
+- Directory layout (`app/`, `public/`, `nuxt.config.ts`)
+- Dev server note (`TMPDIR=/tmp` on macOS)
+- Agent meta-rules and skills index
+
+Do not duplicate `AGENTS.md` content in Cursor rules. If a rule needs to change, change `AGENTS.md`.

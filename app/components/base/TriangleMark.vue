@@ -17,7 +17,7 @@ const uid = useId().replace(/[^a-zA-Z0-9]/g, "");
 <template>
   <svg
     aria-hidden="true"
-    class="section-mark section-mark--triangle pointer-events-none absolute z-0 select-none translate-x-[-22%]"
+    class="section-mark section-mark--triangle pointer-events-none absolute z-0 translate-x-[-22%] select-none"
     :style="{
       width: size,
       height: size,
@@ -37,7 +37,12 @@ const uid = useId().replace(/[^a-zA-Z0-9]/g, "");
         color-interpolation-filters="sRGB"
       >
         <feFlood flood-opacity="0" result="BackgroundImageFix" />
-        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
         <feGaussianBlur stdDeviation="75" result="effect1_foregroundBlur" />
       </filter>
       <linearGradient

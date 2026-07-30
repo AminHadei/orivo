@@ -4,7 +4,9 @@ import PageHero from "@/components/base/PageHero.vue";
 
 <template>
   <PageHero variant="spectrum" full-height>
-    <p class="type-eyebrow tracking-[0.04em] text-foreground">مشاوره هوشمندسازی سازمان</p>
+    <p class="type-eyebrow text-foreground tracking-[0.04em]">
+      مشاوره هوشمندسازی سازمان
+    </p>
 
     <h1 class="type-display mt-5 max-w-215">
       هوشمندسازی سازمان؛ از خرید فناوری تا ساختن سیستمی که تصمیم می‌گیرد

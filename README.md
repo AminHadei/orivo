@@ -6,13 +6,13 @@ Persian (RTL) single-page consulting site plus blog, built with Nuxt 4 and Tailw
 
 ## Stack
 
-| Item     | Value                                                  |
-| -------- | ------------------------------------------------------ |
-| Framework | Nuxt 4 (Vue 3, Vite, TypeScript)                      |
-| Styling   | Tailwind CSS v4 via `@tailwindcss/vite`, shadcn-vue    |
-| Icons     | `@lucide/vue`                                          |
-| Fonts     | Vazirmatn (Persian, self-hosted), Inter (Latin)        |
-| Deploy    | GitHub Pages, static only, `baseURL: /orivo/`          |
+| Item      | Value                                               |
+| --------- | --------------------------------------------------- |
+| Framework | Nuxt 4 (Vue 3, Vite, TypeScript)                    |
+| Styling   | Tailwind CSS v4 via `@tailwindcss/vite`, shadcn-vue |
+| Icons     | `@lucide/vue`                                       |
+| Fonts     | Vazirmatn (Persian, self-hosted), Inter (Latin)     |
+| Deploy    | GitHub Pages, static only, `baseURL: /orivo/`       |
 
 ## Commands
 

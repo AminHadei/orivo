@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["shadcn-nuxt"],
+  modules: ["@nuxt/eslint", "shadcn-nuxt"],
 
   shadcn: {
     prefix: "",
@@ -26,16 +26,6 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-    },
-  },
-
-  router: {
-    options: {
-      scrollBehavior(to, _from, savedPosition) {
-        if (savedPosition) return savedPosition;
-        if (to.hash) return { el: to.hash, behavior: "smooth" };
-        return { top: 0 };
-      },
     },
   },
 

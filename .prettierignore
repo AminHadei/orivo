@@ -1,0 +1,12 @@
+.output
+.nuxt
+.nitro
+.data
+.cache
+.preview
+dist
+node_modules
+pnpm-lock.yaml
+public/**/*.png
+public/**/*.ico
+app/assets/fonts

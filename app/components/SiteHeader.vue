@@ -19,7 +19,10 @@ const bandStyle = computed(() => ({
 }));
 
 const route = useRoute();
-watch(() => route.fullPath, () => (menuOpen.value = false));
+watch(
+  () => route.fullPath,
+  () => (menuOpen.value = false),
+);
 
 onKeyStroke("Escape", () => (menuOpen.value = false));
 
@@ -43,14 +46,14 @@ const menuEntries = [
     <div class="gutter flex h-(--header-h) items-end justify-between pb-4 lg:pb-5">
       <div class="flex min-w-0 items-end gap-4 sm:gap-8">
         <LogoLink size="lg" class="shrink-0" />
-        <p class="type-meta hidden truncate pb-0.5 text-foreground sm:block">
+        <p class="type-meta text-foreground hidden truncate pb-0.5 sm:block">
           مشاوره هوشمندسازی سازمان
         </p>
       </div>
 
       <button
         type="button"
-        class="flex size-11 shrink-0 items-center justify-center rounded-full border border-hairline transition-colors hover:bg-foreground hover:text-background"
+        class="border-hairline hover:bg-foreground hover:text-background flex size-11 shrink-0 items-center justify-center rounded-full border transition-colors"
         :aria-expanded="menuOpen"
         aria-label="فهرست سایت"
         @click="menuOpen = !menuOpen"
@@ -66,14 +69,14 @@ const menuEntries = [
       leave-active-class="transition-opacity duration-200"
       leave-to-class="opacity-0"
     >
-      <div v-if="menuOpen" class="fixed inset-0 z-50 flex flex-col bg-background">
+      <div v-if="menuOpen" class="bg-background fixed inset-0 z-50 flex flex-col">
         <div
-          class="gutter flex h-(--header-h) items-end justify-between border-b border-hairline pb-4 lg:pb-5"
+          class="gutter border-hairline flex h-(--header-h) items-end justify-between border-b pb-4 lg:pb-5"
         >
           <LogoLink size="lg" class="shrink-0" />
           <button
             type="button"
-            class="flex size-11 items-center justify-center rounded-full border border-hairline transition-colors hover:bg-foreground hover:text-background"
+            class="border-hairline hover:bg-foreground hover:text-background flex size-11 items-center justify-center rounded-full border transition-colors"
             aria-label="بستن فهرست"
             @click="menuOpen = false"
           >
@@ -87,7 +90,7 @@ const menuEntries = [
               v-for="entry in menuEntries"
               :key="entry.to"
               :to="entry.to"
-              class="block p-8 text-foreground no-underline transition-colors hover:bg-muted lg:p-12.5"
+              class="text-foreground hover:bg-muted block p-8 no-underline transition-colors lg:p-12.5"
               @click="menuOpen = false"
             >
               <span class="type-card-title block">{{ entry.title }}</span>

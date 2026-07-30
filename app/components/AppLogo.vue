@@ -25,7 +25,7 @@ const markSize = {
   <span class="flex items-center gap-2.5 sm:gap-3">
     <OrivoMark :size="markSize[size]" class="mt-auto" />
     <span
-      class="font-latin font-semibold leading-none tracking-[-0.03em] lowercase"
+      class="font-latin leading-none font-semibold tracking-[-0.03em] lowercase"
       :class="textClass[size]"
     >
       orivo

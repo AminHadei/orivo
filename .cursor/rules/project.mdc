@@ -1,0 +1,12 @@
+---
+description: Project orientation for all agents. Always apply.
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+Agent orientation lives in [AGENTS.md](mdc:AGENTS.md) — read it first.
+
+Topic-specific guidance is loaded on demand via [.cursor/rules/](mdc:.cursor/rules/) and the canonical bodies in [.agents/skills/](mdc:.agents/skills/) (shared with Claude Code, Codex CLI, and Gemini CLI).
+
+Commands: `pnpm install`, `pnpm run dev`, `pnpm run build`, `pnpm run build:pages`, `pnpm run generate`, `pnpm run preview`, `pnpm run check`. Run `pnpm run build:pages` before declaring a deploy-related task complete.

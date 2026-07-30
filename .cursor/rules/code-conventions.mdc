@@ -1,0 +1,9 @@
+---
+description: TypeScript/Vue conventions for orivo app code.
+globs:
+  - app/**/*.{vue,ts}
+  - nuxt.config.ts
+alwaysApply: false
+---
+
+Follow @.agents/skills/code-conventions/SKILL.md.

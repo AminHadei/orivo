@@ -9,11 +9,16 @@ const posts = useBlogPosts().slice(0, 3);
 </script>
 
 <template>
-  <section class="section-block relative overflow-x-clip overflow-y-visible max-sm:overflow-x-visible">
+  <section
+    class="section-block relative overflow-x-clip overflow-y-visible max-sm:overflow-x-visible"
+  >
     <TriangleMark />
 
     <div class="relative z-10">
-      <SectionHeader title="آخرین مقالات" subtitle="یادداشت‌هایی درباره داده، فرایند و تصمیم" />
+      <SectionHeader
+        title="آخرین مقالات"
+        subtitle="یادداشت‌هایی درباره داده، فرایند و تصمیم"
+      />
 
       <HairlineGrid :cols="3">
         <ArticleCard

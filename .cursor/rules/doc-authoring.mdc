@@ -1,0 +1,9 @@
+---
+description: Writing docs/, ADRs, and convention handbooks for orivo.
+globs:
+  - docs/**/*
+  - "**/*.md"
+alwaysApply: false
+---
+
+Follow @.agents/skills/doc-authoring/SKILL.md.

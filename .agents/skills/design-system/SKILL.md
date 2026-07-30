@@ -10,28 +10,28 @@ mirrored for Persian RTL. Tokens live in `app/assets/css/tailwind.css`.
 
 ## Non-negotiables
 
-| Rule            | Value                                                          |
-| --------------- | -------------------------------------------------------------- |
-| Canvas          | `#fff` background, `#000` text                                 |
-| Radius          | `0` everywhere (`--radius: 0`)                                 |
-| Separators      | 1px solid black hairlines — no shadows, no grey borders        |
-| Grids           | Full-bleed, edge-to-edge; cells padded `50px` on desktop        |
-| Page gutter     | 24px → 32px → 50px via `.gutter`                                |
-| Section rhythm  | `100px` above / `250px` below on desktop via `.section-block`   |
-| Body copy       | Pure black; only fine print uses `.type-meta` grey              |
+| Rule           | Value                                                         |
+| -------------- | ------------------------------------------------------------- |
+| Canvas         | `#fff` background, `#000` text                                |
+| Radius         | `0` everywhere (`--radius: 0`)                                |
+| Separators     | 1px solid black hairlines — no shadows, no grey borders       |
+| Grids          | Full-bleed, edge-to-edge; cells padded `50px` on desktop      |
+| Page gutter    | 24px → 32px → 50px via `.gutter`                              |
+| Section rhythm | `100px` above / `250px` below on desktop via `.section-block` |
+| Body copy      | Pure black; only fine print uses `.type-meta` grey            |
 
 ## Type scale
 
 Use the `.type-*` utilities instead of ad-hoc font sizes:
 
-| Class                 | Role                                    |
-| --------------------- | --------------------------------------- |
-| `.type-display`       | Page headline (72px at desktop)         |
-| `.type-section-title` | Section header (36px at desktop)        |
-| `.type-card-title`    | Card heading (28px at desktop)          |
-| `.type-body`          | Body copy                               |
-| `.type-eyebrow`       | Small label above a card title          |
-| `.type-meta`          | Dates, reading time, footer fine print  |
+| Class                 | Role                                   |
+| --------------------- | -------------------------------------- |
+| `.type-display`       | Page headline (72px at desktop)        |
+| `.type-section-title` | Section header (36px at desktop)       |
+| `.type-card-title`    | Card heading (28px at desktop)         |
+| `.type-body`          | Body copy                              |
+| `.type-eyebrow`       | Small label above a card title         |
+| `.type-meta`          | Dates, reading time, footer fine print |
 
 **Persian typography differs from the Latin reference:** never copy the reference's negative
 letter-spacing, and keep leading looser (`1.9` body, `1.35` display). Vazirmatn carries Persian;

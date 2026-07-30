@@ -1,0 +1,10 @@
+---
+description: Layout, typography, RTL, colours, and component appearance in orivo.
+globs:
+  - app/components/**/*.vue
+  - app/assets/css/**
+  - app/pages/**/*.vue
+alwaysApply: false
+---
+
+Follow @.agents/skills/design-system/SKILL.md.

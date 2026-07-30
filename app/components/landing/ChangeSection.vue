@@ -35,7 +35,10 @@ const practices = [
       top="var(--section-disc-top)"
     />
 
-    <SectionHeader title="مدیریت تحول" subtitle="درس‌هایی از فرایند، حاکمیت و پذیرش سازمانی" />
+    <SectionHeader
+      title="مدیریت تحول"
+      subtitle="درس‌هایی از فرایند، حاکمیت و پذیرش سازمانی"
+    />
 
     <HairlineGrid :cols="3">
       <ArticleCard

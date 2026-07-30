@@ -1,0 +1,10 @@
+---
+description: GitHub Pages deploy, baseURL, CI workflow, public/ static JSON, nitro github_pages preset.
+globs:
+  - .github/workflows/**
+  - public/**/*
+  - nuxt.config.ts
+alwaysApply: false
+---
+
+Follow @.agents/skills/static-deploy/SKILL.md.

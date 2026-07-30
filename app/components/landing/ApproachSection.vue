@@ -32,13 +32,20 @@ const label = (index: number) => toPersianDigits(String(index + 1).padStart(2, "
 
 <template>
   <section id="approach" class="section-block scroll-anchor">
-    <SectionHeader title="از کجا شروع کنیم" subtitle="چهار گام پایه در هوشمندسازی سازمان" />
+    <SectionHeader
+      title="از کجا شروع کنیم"
+      subtitle="چهار گام پایه در هوشمندسازی سازمان"
+    />
 
     <!-- Reference layout: the four steps fill one half as a 2×2 grid; a single
          stacked-layers illustration fills the other half across both rows. -->
-    <div class="border-t border-hairline lg:grid lg:grid-cols-2">
+    <div class="border-hairline border-t lg:grid lg:grid-cols-2">
       <HairlineGrid :cols="2" :top-rule="false">
-        <div v-for="(step, index) in steps" :key="step.title" class="flex flex-col p-8 lg:p-12.5">
+        <div
+          v-for="(step, index) in steps"
+          :key="step.title"
+          class="flex flex-col p-8 lg:p-12.5"
+        >
           <span class="type-eyebrow block">{{ label(index) }}</span>
           <h3 class="type-card-title mt-10 lg:mt-12.5">{{ step.title }}</h3>
           <p class="type-body mt-2">{{ step.description }}</p>
@@ -46,9 +53,11 @@ const label = (index: number) => toPersianDigits(String(index + 1).padStart(2, "
       </HairlineGrid>
 
       <div
-        class="relative min-h-120 overflow-hidden border-b border-hairline lg:min-h-0 lg:border-s lg:border-b-0"
+        class="border-hairline relative min-h-120 overflow-hidden border-b lg:min-h-0 lg:border-s lg:border-b-0"
       >
-        <StackedLayersGraphic class="absolute inset-0 m-auto w-auto xl:w-full xl:max-w-none" />
+        <StackedLayersGraphic
+          class="absolute inset-0 m-auto w-auto xl:w-full xl:max-w-none"
+        />
       </div>
     </div>
   </section>
