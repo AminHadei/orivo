@@ -9,7 +9,7 @@ const posts = useBlogPosts().slice(0, 3);
 </script>
 
 <template>
-  <section class="section-block relative max-sm:overflow-x-visible overflow-x-clip overflow-y-visible">
+  <section class="section-block relative overflow-x-clip overflow-y-visible max-sm:overflow-x-visible">
     <TriangleMark />
 
     <div class="relative z-10">

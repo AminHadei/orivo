@@ -14,7 +14,7 @@ withDefaults(
 
 <template>
   <section
-    class="hero-block relative isolate overflow-hidden px-6 pb-10 sm:px-8 lg:ps-[410px] lg:pe-[50px] lg:pb-[60px]"
+    class="hero-block relative isolate overflow-hidden px-6 pb-10 sm:px-8 lg:ps-102.5 lg:pe-12.5 lg:pb-15"
     :class="fullHeight ? 'min-h-[80vh] sm:min-h-[85vh] lg:min-h-screen' : ''"
   >
     <BackdropShape

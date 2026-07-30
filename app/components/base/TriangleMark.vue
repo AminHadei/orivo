@@ -17,7 +17,7 @@ const uid = useId().replace(/[^a-zA-Z0-9]/g, "");
 <template>
   <svg
     aria-hidden="true"
-    class="section-mark section-mark--triangle pointer-events-none absolute z-0 select-none -translate-x-[22%]"
+    class="section-mark section-mark--triangle pointer-events-none absolute z-0 select-none translate-x-[-22%]"
     :style="{
       width: size,
       height: size,

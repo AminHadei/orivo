@@ -40,7 +40,7 @@ const menuEntries = [
     class="fixed inset-x-0 top-0 z-50 border-b border-transparent transition-[background-color,border-color] duration-200"
     :style="bandStyle"
   >
-    <div class="gutter flex h-[var(--header-h)] items-end justify-between pb-4 lg:pb-5">
+    <div class="gutter flex h-(--header-h) items-end justify-between pb-4 lg:pb-5">
       <div class="flex min-w-0 items-end gap-4 sm:gap-8">
         <LogoLink size="lg" class="shrink-0" />
         <p class="type-meta hidden truncate pb-0.5 text-foreground sm:block">
@@ -66,9 +66,9 @@ const menuEntries = [
       leave-active-class="transition-opacity duration-200"
       leave-to-class="opacity-0"
     >
-      <div v-if="menuOpen" class="fixed inset-0 top-0 z-50 flex flex-col bg-background">
+      <div v-if="menuOpen" class="fixed inset-0 z-50 flex flex-col bg-background">
         <div
-          class="gutter flex h-[var(--header-h)] items-end justify-between border-b border-hairline pb-4 lg:pb-5"
+          class="gutter flex h-(--header-h) items-end justify-between border-b border-hairline pb-4 lg:pb-5"
         >
           <LogoLink size="lg" class="shrink-0" />
           <button
@@ -87,7 +87,7 @@ const menuEntries = [
               v-for="entry in menuEntries"
               :key="entry.to"
               :to="entry.to"
-              class="block p-8 text-foreground no-underline transition-colors hover:bg-muted lg:p-[50px]"
+              class="block p-8 text-foreground no-underline transition-colors hover:bg-muted lg:p-12.5"
               @click="menuOpen = false"
             >
               <span class="type-card-title block">{{ entry.title }}</span>

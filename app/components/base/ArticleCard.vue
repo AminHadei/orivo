@@ -21,7 +21,7 @@ withDefaults(
   <component
     :is="to ? NuxtLink : 'div'"
     :to="to"
-    class="group flex h-full flex-col p-8 text-foreground no-underline lg:p-[50px]"
+    class="group flex h-full flex-col p-8 text-foreground no-underline lg:p-12.5"
     :class="
       to
         ? translucentHover
@@ -32,7 +32,7 @@ withDefaults(
   >
     <span v-if="eyebrow" class="type-eyebrow block">{{ eyebrow }}</span>
 
-    <h3 class="type-card-title mt-10 lg:mt-[50px]">{{ title }}</h3>
+    <h3 class="type-card-title mt-10 lg:mt-12.5">{{ title }}</h3>
     <p v-if="description" class="type-body mt-2">{{ description }}</p>
 
     <div class="mt-auto flex items-center justify-between gap-4 pt-8">

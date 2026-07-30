@@ -9,7 +9,7 @@ const links = [
 </script>
 
 <template>
-  <footer class="gutter border-t border-hairline py-10 lg:py-[50px]">
+  <footer class="gutter border-t border-hairline py-10 lg:py-12.5">
     <div class="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
       <div>
         <LogoLink size="md" />

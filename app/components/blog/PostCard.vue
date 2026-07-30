@@ -14,11 +14,11 @@ const meta = computed(
 <template>
   <NuxtLink
     :to="`/blog/${post.slug}`"
-    class="group flex h-full flex-col p-8 text-foreground no-underline transition-colors hover:bg-muted lg:p-[50px]"
+    class="group flex h-full flex-col p-8 text-foreground no-underline transition-colors hover:bg-muted lg:p-12.5"
   >
     <span class="type-eyebrow block">{{ post.category }}</span>
 
-    <h3 class="type-card-title mt-10 lg:mt-[50px]">{{ post.title }}</h3>
+    <h3 class="type-card-title mt-10 lg:mt-12.5">{{ post.title }}</h3>
     <p class="type-body mt-2">{{ post.shortSummary }}</p>
 
     <div class="mt-auto flex items-center justify-between gap-4 pt-8">

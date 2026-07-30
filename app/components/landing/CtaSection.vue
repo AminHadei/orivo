@@ -13,9 +13,9 @@ function onSubmit() {
 </script>
 
 <template>
-  <section id="contact" class="mt-64 lg:mt-none">
-    <HairlineGrid :cols="2" :bottomRule="false">
-      <div class="p-8 lg:p-[50px]">
+  <section id="contact" class="mt-64 lg:mt-0">
+    <HairlineGrid :cols="2" :bottom-rule="false">
+      <div class="p-8 lg:p-12.5">
         <div class="max-w-110">
           <h3 class="type-card-title">آماده شروع هستید؟</h3>
           <p class="type-body mt-2">
@@ -28,7 +28,7 @@ function onSubmit() {
         </div>
       </div>
 
-      <div class="p-8 lg:p-[50px]">
+      <div class="p-8 lg:p-12.5">
         <div class="max-w-110">
           <h3 class="type-card-title">خبرنامه اوریوو</h3>
           <p class="type-body mt-2">
@@ -42,7 +42,7 @@ function onSubmit() {
               required
               placeholder="نشانی ایمیل شما"
               aria-label="نشانی ایمیل"
-              class="type-body min-w-0 flex-1 bg-transparent placeholder:text-muted-foreground focus:outline-none"
+              class="type-body min-w-0 flex-1 bg-transparent placeholder:text-muted-foreground focus:outline-hidden"
             />
             <button
               type="submit"
