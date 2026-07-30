@@ -1,0 +1,321 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn-vue/tailwind.css";
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../fonts/vazir/Vazirmatn-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Vazirmatn", "Inter", sans-serif;
+  --font-vazir: "Vazirmatn", sans-serif;
+  --font-latin: "Inter", "Helvetica Neue", sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-hairline: var(--hairline);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-green: var(--accent-green);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-yellow: var(--accent-yellow);
+  --color-accent-red: var(--accent-red);
+  --color-accent-purple: var(--accent-purple);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-destructive: var(--destructive);
+
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+
+  /* Page gutter - 50px on desktop, matching the reference layout. */
+  --spacing-gutter: 1.5rem;
+}
+
+:root {
+  /* Single source of truth for the header band: the header sets its height from
+     it and page heroes reserve the same space, since the header overlays them. */
+  --header-h: 80px;
+  --radius: 0;
+
+  /* Decorative discs - tuned per breakpoint so shapes stay visible on mobile
+     without spilling past the viewport. */
+  --hero-disc-size: clamp(17.5rem, 92vw, 40rem);
+  --hero-disc-start: -2.5rem;
+  --hero-disc-top: calc(var(--header-h) - 3.5rem);
+
+  --section-disc-size: clamp(15rem, 84vw, 34rem);
+  --section-disc-start: -4rem;
+  --section-disc-top: 0;
+
+  --disc-glow-width: 150%;
+  --disc-glow-blur: 28px;
+
+  --mark-triangle-size: clamp(28rem, 144vw, 52rem);
+  --mark-citrus-size: clamp(26rem, 136vw, 46rem);
+
+  --background: #fff;
+  --foreground: #000;
+  --hairline: #000;
+  --card: #fff;
+  --card-foreground: #000;
+  --muted: #f5f5f5;
+  --muted-foreground: #6b6b6b;
+  --primary: #000;
+  --primary-foreground: #fff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #000;
+  --accent: #f5f5f5;
+  --accent-foreground: #000;
+  --accent-green: #4ade80;
+  --accent-blue: #3b82f6;
+  --accent-yellow: #fbbf24;
+  --accent-red: #f87171;
+  --accent-purple: #c084fc;
+  --destructive: #e11d48;
+  --border: #000;
+  --input: #000;
+  --ring: #000;
+  --popover: #fff;
+  --popover-foreground: #000;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --header-h: 96px;
+    --hero-disc-start: -3.5rem;
+    --hero-disc-top: calc(var(--header-h) - 5rem);
+    --section-disc-start: -6rem;
+    --section-disc-top: 0.5rem;
+    --disc-glow-width: 165%;
+    --disc-glow-blur: 36px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --header-h: 112px;
+    --hero-disc-start: -5rem;
+    --hero-disc-top: calc(var(--header-h) - 6rem);
+    --section-disc-size: min(34rem, 64vw);
+    --section-disc-start: -8rem;
+    --section-disc-top: clamp(-1rem, -2vw, 0.5rem);
+    --mark-triangle-size: min(62rem, 72vw);
+    --mark-citrus-size: min(46rem, 68vw);
+    --disc-glow-width: 190%;
+    --disc-glow-blur: 48px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-hairline outline-ring/50;
+  }
+
+  html {
+    @apply antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-background font-vazir text-foreground;
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  /* Latin script inside Persian copy keeps Inter metrics. */
+  :where(code, kbd, samp) {
+    font-family: var(--font-latin);
+  }
+
+  /* Tailwind's preflight resets buttons to cursor: default. Cover every
+     interactive surface - including router links rendered without an href yet
+     and native controls that look clickable. */
+  :where(
+    a,
+    button,
+    [role="button"],
+    summary,
+    label[for],
+    select,
+    input[type="submit"],
+    input[type="button"],
+    input[type="reset"]
+  ) {
+    cursor: pointer;
+  }
+
+  :where(button, [role="button"], input):disabled {
+    cursor: not-allowed;
+  }
+}
+
+@layer utilities {
+  .font-latin {
+    font-family: var(--font-latin);
+  }
+
+  /* Page gutter: 24px → 32px → 50px, mirroring the reference grid. */
+  .gutter {
+    padding-inline: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .gutter {
+      padding-inline: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .gutter {
+      padding-inline: 50px;
+    }
+  }
+
+  /* Vertical rhythm between full-bleed sections: 100px above, 250px below on
+     desktop, as in the reference layout. */
+  .section-block {
+    margin-block: 4rem 6rem;
+  }
+
+  @media (min-width: 1024px) {
+    .section-block {
+      margin-block: 100px 250px;
+    }
+  }
+
+  /* Top band of a page. The header floats above the content so its band is
+     reserved here, which also lets backdrop shapes bleed up behind it. */
+  .hero-block {
+    padding-top: calc(var(--header-h) + 2.5rem);
+  }
+
+  @media (min-width: 1024px) {
+    .hero-block {
+      padding-top: calc(var(--header-h) + 90px);
+    }
+  }
+
+  /* Hash targets: land 20px below the fixed header band, on the title row. */
+  .scroll-anchor {
+    scroll-margin-top: calc(var(--header-h) + 20px);
+  }
+
+  /* Section marks - always flush to the inline-end (visual left in RTL). */
+  .section-mark {
+    inset-inline-end: 0;
+  }
+
+  .section-mark--citrus {
+    top: -100px;
+    bottom: auto;
+  }
+
+  @media (min-width: 640px) {
+    .section-mark--citrus {
+      top: -40px;
+      bottom: auto;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-mark--citrus {
+      bottom: calc(-14rem + 200px);
+    }
+  }
+
+  /* Triangle - foot of the section with bottom bleed (same on mobile and desktop). */
+  .section-mark--triangle {
+    top: auto;
+    bottom: -20rem;
+  }
+
+  @media (min-width: 1024px) {
+    .section-mark--triangle {
+      bottom: -22rem;
+    }
+  }
+
+  /* Display type - reference uses 72/500 with tight tracking. Persian script
+     needs neutral tracking and looser leading to stay legible. */
+  .type-display {
+    font-size: clamp(2.25rem, 5.2vw, 4.5rem);
+    font-weight: 500;
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+
+  .type-section-title {
+    font-size: clamp(1.625rem, 2.6vw, 2.25rem);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .type-card-title {
+    font-size: clamp(1.25rem, 1.8vw, 1.75rem);
+    font-weight: 500;
+    line-height: 1.65;
+  }
+
+  .type-body {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  /* Reference sets all body copy in pure black; only fine print recedes. */
+  .type-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .type-meta {
+    font-size: 0.8125rem;
+    line-height: 1.7;
+    color: var(--muted-foreground);
+  }
+}
+
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal-hidden {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
