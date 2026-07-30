@@ -1,6 +1,8 @@
 {
   "name": "orivo",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Enterprise-intelligence consulting site - from data maturity assessment to AI in operations.",
+  "homepage": "https://aminhadei.github.io/orivo/",
   "private": true,
   "type": "module",
   "scripts": {
