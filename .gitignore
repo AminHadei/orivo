@@ -1,0 +1,34 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+.preview
+
+# Build outputs
+dist
+dist-ssr
+
+# Local static preview root — holds an /orivo symlink to .output/public so the
+# GitHub Pages baseURL resolves when serving the build locally.
+.preview
+*.local
+.pnpm-store
+
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example

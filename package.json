@@ -1,0 +1,34 @@
+{
+  "name": "orivo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "build:pages": "nuxt build --preset github_pages",
+    "dev": "TMPDIR=/tmp nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "icons:generate": "cd public && npx @resvg/resvg-js-cli --fit-width 180 favicon.svg apple-touch-icon.png && npx @resvg/resvg-js-cli --fit-width 512 favicon.svg icon-512.png && npx @resvg/resvg-js-cli --fit-width 512 icon-maskable.svg icon-maskable-512.png && npx @resvg/resvg-js-cli --fit-width 48 favicon.svg /tmp/orivo-fav48.png && npx @resvg/resvg-js-cli --fit-width 32 favicon.svg /tmp/orivo-fav32.png && npx @resvg/resvg-js-cli --fit-width 16 favicon.svg /tmp/orivo-fav16.png && magick /tmp/orivo-fav48.png /tmp/orivo-fav32.png /tmp/orivo-fav16.png favicon.ico && rm /tmp/orivo-fav48.png /tmp/orivo-fav32.png /tmp/orivo-fav16.png"
+  },
+  "dependencies": {
+    "@lucide/vue": "^1.17.0",
+    "@vueuse/core": "^14.3.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "nuxt": "^4.4.7",
+    "reka-ui": "^2.9.9",
+    "shadcn-nuxt": "^2.7.4",
+    "shadcn-vue": "^2.7.4",
+    "tailwind-merge": "^3.6.0",
+    "tw-animate-css": "^1.4.0",
+    "vue": "^3.5.35",
+    "vue-router": "^5.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.0",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^6.0.3"
+  }
+}
